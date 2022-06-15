@@ -1,1 +1,3 @@
-console.log("Is this thing on?");
+import loadPage from './initial-page.js';
+
+loadPage();
