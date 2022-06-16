@@ -1,3 +1,5 @@
-import loadPage from './initial-page.js';
+import loadInitialPage from './initial-page.js';
+import createFoodItem from './menu-page.js';
 
-loadPage();
+loadInitialPage();
+createFoodItem();

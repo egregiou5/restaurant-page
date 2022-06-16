@@ -1,13 +1,13 @@
 import Cafe from './cafe-background.jpg';
 
-export default function loadPage() {
+export default function loadInitialPage() {
   const content = document.querySelector('#content');
 
   // Header contents
   const header = document.createElement('div');
   
   const restaurantName = document.createElement('h1');
-  restaurantName.textContent = 'Coffee Cafe';
+  restaurantName.textContent = 'The Morning Fix';
   
   header.appendChild(restaurantName);
   
@@ -23,6 +23,7 @@ export default function loadPage() {
   
   const cafeImage = new Image();
   cafeImage.src = Cafe;
+  cafeImage.style.width = '400px';
   
   main.appendChild(cafeImage);
   
