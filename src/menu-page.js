@@ -40,7 +40,7 @@ function createFoodItem(obj) {
   content.appendChild(foodDiv);
 }
 
-export default function loadFoodItems() {
+export default function loadMenu() {
   for (let i = 0; i < foodItems.length; i++) {
     createFoodItem(foodItems[i]);
   }
