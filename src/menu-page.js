@@ -1,21 +1,49 @@
 import Donuts from './images/donuts.jpg';
+import Croissants from './images/croissants.jpg';
+import Cupcakes from './images/cupcakes.jpg';
+import Sandwiches from './images/sandwiches.jpg';
 
-export default function createFoodItem() {
+const foodItems = [
+  {
+    name: 'Donuts',
+    url: Donuts
+  },
+  {
+    name: 'Croissants',
+    url: Croissants
+  },
+  {
+    name: 'Cupcakes',
+    url: Cupcakes
+  },
+  {
+    name: 'Sandwiches',
+    url: Sandwiches
+  }
+]
+
+function createFoodItem(obj) {
   const content = document.querySelector('#content');
 
-  const foodItem = document.createElement('div');
-  foodItem.classList.add('food-item');
+  const foodDiv = document.createElement('div');
+  foodDiv.classList.add('food-item');
   
   const foodName = document.createElement('h2');
-  foodName.textContent = "Donuts";
+  foodName.textContent = obj.name;
   const foodImage = new Image();
-  foodImage.src = Donuts;
+  foodImage.src = obj.url;
   foodImage.style.width = '200px';
   
-  foodItem.appendChild(foodName);
-  foodItem.appendChild(foodImage);
+  foodDiv.appendChild(foodName);
+  foodDiv.appendChild(foodImage);
 
-  content.appendChild(foodItem);
+  content.appendChild(foodDiv);
+}
+
+export default function loadFoodItems() {
+  for (let i = 0; i < foodItems.length; i++) {
+    createFoodItem(foodItems[i]);
+  }
 }
 
 // latte, espresso, americano, mocha
