@@ -15,17 +15,34 @@ function createHeader() {
   const headerNav = document.createElement('nav');
   const homeButton = document.createElement('button');
   homeButton.textContent = 'Home';
-  headerNav.appendChild(homeButton);
   const menuButton = document.createElement('button');
   menuButton.textContent = 'Menu';
-  headerNav.appendChild(menuButton);
   const contactButton = document.createElement('button');
   contactButton.textContent = 'Contact';
+  
+  addListeners(homeButton, menuButton, contactButton);
+  headerNav.appendChild(homeButton);
+  headerNav.appendChild(menuButton);
   headerNav.appendChild(contactButton);
   
   header.appendChild(headerNav);
   
   content.appendChild(header);
+}
+
+function addListeners(home, menu, contact) {
+  home.addEventListener('click', () => {
+    clearMainContent();
+    loadInitialPage();
+  });
+  menu.addEventListener('click', () => {
+    clearMainContent();
+    loadMenuPage();
+  });
+  contact.addEventListener('click', () => {
+    clearMainContent();
+    loadContactPage();
+  });
 }
 
 function createMainContentDiv() {
@@ -50,5 +67,3 @@ function initialisePage() {
 }
 
 initialisePage();
-loadMenuPage();
-loadContactPage();
