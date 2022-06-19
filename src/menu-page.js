@@ -23,7 +23,7 @@ const foodItems = [
 ]
 
 function createFoodItem(obj) {
-  const content = document.querySelector('#content');
+  const mainContent = document.querySelector('.main-content');
 
   const foodDiv = document.createElement('div');
   foodDiv.classList.add('food-item');
@@ -37,7 +37,7 @@ function createFoodItem(obj) {
   foodDiv.appendChild(foodName);
   foodDiv.appendChild(foodImage);
 
-  content.appendChild(foodDiv);
+  mainContent.appendChild(foodDiv);
 }
 
 export default function loadMenu() {

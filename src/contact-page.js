@@ -1,5 +1,5 @@
 export default function loadContactPage() {
-  const content = document.querySelector('#content');
+  const mainContent = document.querySelector('.main-content');
 
   const infoContainer = document.createElement('div');
 
@@ -14,5 +14,5 @@ export default function loadContactPage() {
   infoEmail.textContent = 'themorningfix@example.com';
   infoContainer.appendChild(infoEmail);
 
-  content.appendChild(infoContainer);
+  mainContent.appendChild(infoContainer);
 }
