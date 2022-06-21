@@ -1,6 +1,7 @@
 import loadInitialPage from './initial-page.js';
 import loadMenuPage from './menu-page.js';
 import loadContactPage from './contact-page.js';
+import './style.css';
 
 function createHeader() {
   const content = document.querySelector('#content');
@@ -33,6 +34,7 @@ function createHeader() {
 function addListeners(home, menu, contact) {
   home.addEventListener('click', () => {
     clearMainContent();
+    checkMenuFlex();
     loadInitialPage();
   });
   menu.addEventListener('click', () => {
@@ -41,6 +43,7 @@ function addListeners(home, menu, contact) {
   });
   contact.addEventListener('click', () => {
     clearMainContent();
+    checkMenuFlex();
     loadContactPage();
   });
 }
@@ -57,6 +60,13 @@ function clearMainContent() {
   while (mainContentChild) {
     mainContent.removeChild(mainContentChild);
     mainContentChild = mainContent.lastElementChild;
+  }
+}
+
+function checkMenuFlex() {
+  const mainContent = document.querySelector('.main-content');
+  if (mainContent.classList.contains('menu-flex')) {
+    mainContent.classList.remove('menu-flex');
   }
 }
 

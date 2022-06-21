@@ -1,0 +1,59 @@
+:root {
+  --font-white: rgb(235, 235, 235);
+}
+
+body {
+  background: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./cafe-background.jpg');
+  background-size: cover;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header > h1 {
+  color: var(--font-white);
+  font-family: 'Arvo', serif;
+  font-size: 4rem;
+  padding: 1em 1em;
+  margin: 0;
+}
+
+.header > nav {
+  padding: 2em 1em;
+  margin-right: 50px;
+}
+
+nav > button {
+  color: var(--font-white);
+  background-color: transparent;
+  border: 0;
+  font-size: 2.5rem;
+  padding: 0 25px;
+  cursor: pointer;
+}
+
+.main-content {
+  color: var(--font-white);
+  margin: 2rem 8rem;
+}
+
+.tagline {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: oblique;
+  font-size: 2.5rem;
+}
+
+.desc {
+  font-size: 2rem;
+}
+
+.menu-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
