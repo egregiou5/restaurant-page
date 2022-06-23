@@ -28,13 +28,25 @@ body {
   margin-right: 50px;
 }
 
-nav > button {
+.nav-button {
   color: var(--font-white);
   background-color: transparent;
   border: 0;
   font-size: 2.5rem;
-  padding: 0 25px;
+  padding: 5px 10px;
+  margin-right: 45px;
   cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.nav-button:hover {
+  transform: translateY(-10px) translateX(10px);
+  box-shadow: -5px 5px #ffffff;
+}
+
+.nav-button.active {
+  transform: translateY(-10px) translateX(10px);
+  box-shadow: -5px 5px #ffffff;
 }
 
 .main-content {
