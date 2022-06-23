@@ -2,6 +2,7 @@ export default function loadContactPage() {
   const mainContent = document.querySelector('.main-content');
 
   const infoContainer = document.createElement('div');
+  infoContainer.classList.add('contact-info');
 
   const infoTitle = document.createElement('h1');
   infoTitle.textContent = 'Contact Us';

@@ -3,7 +3,7 @@
 }
 
 body {
-  background: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./cafe-background.jpg');
+  background: linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('./cafe-background.jpg');
   background-size: cover;
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -39,7 +39,7 @@ nav > button {
 
 .main-content {
   color: var(--font-white);
-  margin: 2rem 8rem;
+  margin: 20px 140px;
 }
 
 .tagline {
@@ -53,7 +53,28 @@ nav > button {
 }
 
 .menu-flex {
+  background: linear-gradient(0deg, rgba(0,0,0,0.8), rgba(0,0,0,0.8));
+  padding: 30px;
+  margin: 20px 200px;
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
+}
+
+.menu-food-name {
+  padding-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.contact-info {
+  padding: 15px;
+}
+
+.contact-info > h1 {
+  font-size: 40px;
+}
+
+.contact-info > p {
+  font-size: 30px;
 }

@@ -2,6 +2,8 @@ import Donuts from './images/donuts.jpg';
 import Croissants from './images/croissants.jpg';
 import Cupcakes from './images/cupcakes.jpg';
 import Sandwiches from './images/sandwiches.jpg';
+import Bagels from './images/bagels.jpg';
+import Coffee from './images/coffee.jpg';
 
 const foodItems = [
   {
@@ -19,6 +21,14 @@ const foodItems = [
   {
     name: 'Sandwiches',
     url: Sandwiches
+  },
+  {
+    name: 'Bagels',
+    url: Bagels
+  },
+  {
+    name: 'Coffee',
+    url: Coffee
   }
 ]
 
@@ -29,7 +39,8 @@ function createFoodItem(obj) {
   const foodDiv = document.createElement('div');
   foodDiv.classList.add('food-item');
   
-  const foodName = document.createElement('h2');
+  const foodName = document.createElement('div');
+  foodName.classList.add('menu-food-name');
   foodName.textContent = obj.name;
   const foodImage = new Image();
   foodImage.src = obj.url;
@@ -48,5 +59,3 @@ export default function loadMenu() {
     createFoodItem(foodItems[i]);
   }
 }
-
-// latte, espresso, americano, mocha
